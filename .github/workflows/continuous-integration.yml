@@ -27,8 +27,8 @@ jobs:
         run: npm install --frozen-lockfile
         shell: bash
 
-      - name: Setup Playwright Browsers
-        run: npx playwright install
+      - name: Setup Playwright
+        run: npx playwright install --with-deps
 
       - name: Run linters
         run: npm run lint
