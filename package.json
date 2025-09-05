@@ -1,0 +1,52 @@
+{
+  "name": "@vanesterik/ui",
+  "version": "1.0.0",
+  "description": "Component library based on Tailwind CSS",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vanesterik/ui.git"
+  },
+  "author": "Koen van Esterik <koen@vanesterik.dev>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vanesterik/ui/issues"
+  },
+  "homepage": "https://github.com/vanesterik/ui#readme",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "dist/styles.css"
+  ],
+  "dependencies": {
+    "class-variance-authority": "^0.7.1"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.2.2",
+    "@ladle/react": "^5.0.3",
+    "@tailwindcss/vite": "^4.1.12",
+    "@types/node": "^24.3.0",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "playwright": "^1.55.0",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4",
+    "vitest-axe": "^0.1.0",
+    "vitest-browser-react": "^1.0.1"
+  },
+  "peerDependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "tailwindcss": "^4.1.12"
+  },
+  "scripts": {
+    "build": "tsc && cp src/styles.css dist/styles.css",
+    "clean": "rimraf dist",
+    "dev": "ladle serve",
+    "lint": "biome check",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit"
+  }
+}
