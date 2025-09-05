@@ -28,7 +28,7 @@ jobs:
         shell: bash
 
       - name: Setup Playwright
-        run: npx playwright install --with-deps
+        run: npx playwright install --with-deps chromium
 
       - name: Run linters
         run: npm run lint
