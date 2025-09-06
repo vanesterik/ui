@@ -15,7 +15,10 @@
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": ["dist", "dist/styles.css"],
+  "files": [
+    "dist",
+    "dist/styles.css"
+  ],
   "dependencies": {
     "class-variance-authority": "^0.7.1"
   },
@@ -30,7 +33,6 @@
     "rimraf": "^6.0.1",
     "typescript": "^5.9.2",
     "vitest": "^3.2.4",
-    "vitest-axe": "^0.1.0",
     "vitest-browser-react": "^1.0.1"
   },
   "peerDependencies": {

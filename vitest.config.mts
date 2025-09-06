@@ -1,14 +1,15 @@
+import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vitest/config'
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), tailwindcss()],
   test: {
+    setupFiles: './vitest.setup.mts',
     browser: {
       enabled: true,
       provider: 'playwright',
       instances: [{ browser: 'chromium' }],
-      headless: true,
     },
   },
 })

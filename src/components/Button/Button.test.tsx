@@ -1,6 +1,5 @@
 import { describe, expect, it } from 'vitest'
 import { render } from 'vitest-browser-react'
-
 import { Button } from './Button'
 
 describe('Button', () => {
