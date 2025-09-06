@@ -1,6 +1,6 @@
 import clsx from 'clsx'
-import { Card } from '~/components/Card'
-import { Text } from '~/components/Text'
+import { Card } from '../Card/Card'
+import { Text } from '../Text/Text'
 
 export const Palette = () => (
   <div className="grid grid-cols-5 gap-0.5">

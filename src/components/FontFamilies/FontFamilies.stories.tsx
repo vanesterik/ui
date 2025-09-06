@@ -1,6 +1,6 @@
 import type { PropsWithChildren } from 'react'
-import { Card } from '~/components/Card'
-import { Text } from '~/components/Text'
+import { Card } from '../Card/Card'
+import { Text } from '../Text/Text'
 
 export const Families = () => (
   <div className="flex flex-col gap-0.5">

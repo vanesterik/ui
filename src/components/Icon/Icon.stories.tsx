@@ -1,6 +1,6 @@
 import type { ComponentProps } from 'react'
-import { Card } from '~/components/Card'
-import { Text } from '~/components/Text'
+import { Card } from '../Card/Card'
+import { Text } from '../Text/Text'
 import { Icon } from './Icon'
 
 export const Collection = () => (
