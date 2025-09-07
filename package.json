@@ -37,7 +37,7 @@
     "tailwindcss": "^4.1.12"
   },
   "scripts": {
-    "build": "tsc && cp src/styles.css dist/styles.css",
+    "build": "tsc && cp src/styles.css dist/styles.css && cp -R src/fonts dist/fonts",
     "clean": "rimraf dist",
     "dev": "ladle serve",
     "lint": "biome check",

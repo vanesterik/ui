@@ -1,0 +1,9 @@
+@import "tailwindcss" source("../src/");
+
+/* Override prefers-color-scheme media query */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Override ladle default theme styles */
+[data-theme="dark"] {
+  --ladle-bg-color-primary: #000000;
+}

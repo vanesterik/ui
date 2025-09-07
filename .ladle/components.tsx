@@ -1,8 +1,7 @@
 import type { GlobalProvider } from '@ladle/react'
 import { useEffect } from 'react'
 
-import './overrides.css'
-import '../src/styles.css'
+import './styles.css'
 
 export const Provider: GlobalProvider = ({
   children,

@@ -1,4 +1,0 @@
-/* Override ladle default theme styles */
-[data-theme="dark"] {
-  --ladle-bg-color-primary: #000000;
-}
