@@ -11,5 +11,8 @@ export const Collection = () => (
         {variant}
       </Button>
     ))}
+    <Button href="#" intent="ghost">
+      Link
+    </Button>
   </div>
 )

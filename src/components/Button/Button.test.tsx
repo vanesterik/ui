@@ -33,4 +33,42 @@ describe('Button', () => {
     const { getByTestId } = render(<Button data-testid="btn">Test</Button>)
     await expect.element(getByTestId('btn')).toBeInTheDocument()
   })
+
+  it('renders as an anchor when href is provided', async () => {
+    const { getByRole } = render(
+      <Button href="https://example.com">Link</Button>,
+    )
+    const anchor = getByRole('link')
+    await expect.element(anchor).toBeInTheDocument()
+    await expect.element(anchor).toHaveAttribute('href', 'https://example.com')
+  })
+
+  it('forwards anchor props correctly', async () => {
+    const { getByRole } = render(
+      <Button href="https://example.com" target="_blank" rel="noopener">
+        External
+      </Button>,
+    )
+    const anchor = getByRole('link')
+    await expect.element(anchor).toHaveAttribute('target', '_blank')
+    await expect.element(anchor).toHaveAttribute('rel', 'noopener')
+  })
+
+  it('forwards button props correctly', async () => {
+    const { getByRole } = render(
+      <Button type="submit" disabled>
+        Submit
+      </Button>,
+    )
+    const btn = getByRole('button')
+    await expect.element(btn).toHaveAttribute('type', 'submit')
+    await expect.element(btn).toHaveAttribute('disabled')
+  })
+
+  it('renders children inside anchor', async () => {
+    const { getByText } = render(
+      <Button href="https://example.com">Anchor Child</Button>,
+    )
+    await expect.element(getByText('Anchor Child')).toBeInTheDocument()
+  })
 })

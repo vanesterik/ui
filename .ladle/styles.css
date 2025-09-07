@@ -1,4 +1,5 @@
 @import "tailwindcss" source("../src/");
+@import "../src/styles.css";
 
 /* Override prefers-color-scheme media query */
 @custom-variant dark (&:where(.dark, .dark *));

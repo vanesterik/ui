@@ -1,5 +1,9 @@
 import { cva, type VariantProps } from 'class-variance-authority'
-import type { PropsWithChildren } from 'react'
+import type {
+  AnchorHTMLAttributes,
+  ButtonHTMLAttributes,
+  PropsWithChildren,
+} from 'react'
 
 const button = cva(
   [
@@ -62,10 +66,21 @@ const button = cva(
 )
 
 type ButtonProps = PropsWithChildren<VariantProps<typeof button>> &
-  React.HTMLAttributes<HTMLButtonElement>
+  ButtonHTMLAttributes<HTMLButtonElement> &
+  AnchorHTMLAttributes<HTMLAnchorElement>
 
-export const Button = ({ children, intent, ...props }: ButtonProps) => (
-  <button className={button({ intent })} {...props}>
-    {children}
-  </button>
-)
+export const Button = ({ children, intent, ...props }: ButtonProps) => {
+  if (props.href) {
+    return (
+      <a className={button({ intent })} {...props}>
+        {children}
+      </a>
+    )
+  }
+
+  return (
+    <button className={button({ intent })} {...props}>
+      {children}
+    </button>
+  )
+}
