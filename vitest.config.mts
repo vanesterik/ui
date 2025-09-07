@@ -5,7 +5,7 @@ import { defineConfig } from 'vitest/config'
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   test: {
-    setupFiles: './vitest.setup.mts',
+    setupFiles: './vitest.setup.css',
     browser: {
       enabled: true,
       provider: 'playwright',
