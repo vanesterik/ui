@@ -64,7 +64,6 @@ describe('Stack', () => {
     await expect
       .element(getByTestId('stack'))
       .toHaveClass('flex-row', 'justify-between', 'gap-x-0')
-    // await expect.element(getByTestId('stack')).not.toHaveClass('gap-x-0.5')
   })
 
   it('applies compound variant for column + between', async () => {
@@ -76,6 +75,5 @@ describe('Stack', () => {
     await expect
       .element(getByTestId('stack'))
       .toHaveClass('flex-col', 'justify-between', 'gap-y-0')
-    // await expect.element(getByTestId('stack')).not.toHaveClass('gap-y-0.5')
   })
 })
