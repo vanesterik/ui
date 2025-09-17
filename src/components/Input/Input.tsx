@@ -11,7 +11,7 @@ const input = cva(
   [
     'border',
     'border-primary-200',
-    'inline-flex',
+    'flex',
     'flex-row',
     'gap-x-1',
     'h-8',
