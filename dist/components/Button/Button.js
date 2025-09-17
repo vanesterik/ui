@@ -56,5 +56,10 @@ const button = cva([
         intent: 'primary',
     },
 });
-export const Button = ({ children, intent, ...props }) => (_jsx("button", { className: button({ intent }), ...props, children: children }));
+export const Button = ({ children, intent, ...props }) => {
+    if (props.href) {
+        return (_jsx("a", { className: button({ intent }), ...props, children: children }));
+    }
+    return (_jsx("button", { className: button({ intent }), ...props, children: children }));
+};
 //# sourceMappingURL=Button.js.map

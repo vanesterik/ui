@@ -1,7 +1,7 @@
 import { type VariantProps } from 'class-variance-authority';
 import type { HTMLAttributes } from 'react';
 declare const text: (props?: ({
-    intent?: "link" | "footnote" | "label" | null | undefined;
+    intent?: "link" | "label" | "footnote" | null | undefined;
 } & import("class-variance-authority/dist/types").ClassProp) | undefined) => string;
 type TextProps = {
     tag?: 'div' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'label' | 'p' | 'span';
