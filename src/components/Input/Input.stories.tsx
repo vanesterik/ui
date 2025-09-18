@@ -1,5 +1,5 @@
-import { Story } from '@ladle/react'
-import { ComponentProps, useEffect, useRef, useState } from 'react'
+import type { Story } from '@ladle/react'
+import { type ComponentProps, useEffect, useRef, useState } from 'react'
 import { Kbd } from '../Kbd/Kbd'
 import { Text } from '../Text/Text'
 import { Input } from './Input'

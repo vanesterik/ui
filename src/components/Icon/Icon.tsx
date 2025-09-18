@@ -11,5 +11,5 @@ const icon = cva(['font-icon', 'text-base', 'text-black', 'dark:text-white'], {
 })
 
 export const Icon = ({ name }: VariantProps<typeof icon>) => (
-  <div className={icon({ name })}></div>
+  <div className={icon({ name })} />
 )

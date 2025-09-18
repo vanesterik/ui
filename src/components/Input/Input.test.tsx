@@ -30,9 +30,15 @@ describe('Input', () => {
   it('applies error styles when error prop is true', () => {
     const { container } = render(<Input error />)
     expect(container.querySelector('.border-red-500')).toBeInTheDocument()
-    expect(container.querySelector('.focus-within\\:border-red-500')).toBeInTheDocument()
-    expect(container.querySelector('.dark\\:border-red-900')).toBeInTheDocument()
-    expect(container.querySelector('.dark\\:focus-within\\:border-red-900')).toBeInTheDocument()
+    expect(
+      container.querySelector('.focus-within\\:border-red-500'),
+    ).toBeInTheDocument()
+    expect(
+      container.querySelector('.dark\\:border-red-900'),
+    ).toBeInTheDocument()
+    expect(
+      container.querySelector('.dark\\:focus-within\\:border-red-900'),
+    ).toBeInTheDocument()
   })
 
   it('forwards ref to the input element', () => {

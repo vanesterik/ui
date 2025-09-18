@@ -43,6 +43,7 @@
     "build": "npm run clean && tsc && cp src/styles.css dist/styles.css && cp -R src/fonts dist/fonts",
     "clean": "rimraf dist",
     "dev": "ladle serve",
+    "format": "biome format --write",
     "lint": "biome check",
     "test": "vitest",
     "typecheck": "tsc --noEmit"

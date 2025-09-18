@@ -1,5 +1,5 @@
 import type { Story } from '@ladle/react'
-import { ComponentProps } from 'react'
+import type { ComponentProps } from 'react'
 import { Card } from '../Card/Card'
 import { Text } from '../Text/Text'
 import { Stack } from './Stack'
