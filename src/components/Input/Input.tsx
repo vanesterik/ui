@@ -25,7 +25,12 @@ const input = cva(
   {
     variants: {
       error: {
-        true: ['border-red-500', 'dark:border-red-900'],
+        true: [
+          'border-red-500',
+          'focus-within:border-red-500',
+          'dark:border-red-900',
+          'dark:focus-within:border-red-900',
+        ],
       },
     },
   },
