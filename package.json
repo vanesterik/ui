@@ -15,7 +15,10 @@
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": ["dist", "dist/styles.css"],
+  "files": [
+    "dist",
+    "dist/styles.css"
+  ],
   "dependencies": {
     "class-variance-authority": "^0.7.1"
   },
@@ -37,7 +40,7 @@
     "tailwindcss": "^4.1.12"
   },
   "scripts": {
-    "build": "tsc && cp src/styles.css dist/styles.css && cp -R src/fonts dist/fonts",
+    "build": "npm run clean && tsc && cp src/styles.css dist/styles.css && cp -R src/fonts dist/fonts",
     "clean": "rimraf dist",
     "dev": "ladle serve",
     "lint": "biome check",
